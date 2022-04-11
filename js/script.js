@@ -4,15 +4,11 @@
 
 'use strict'
 /**
- * This function calculates celsius and perimeter of rectangle.
+ * Calculates fahrenheit to celsius and celsius to fahrenheit using the user's input. 
  */
-function calculate () {
-  // input
-  const celsius = parseInt(document.getElementById('farenheit').value)
-
-  // process 
-  const celsius = (5/9) * (farenheit - 32)
-
-  // output
-  document.getElementById('celsius').innerHTML = '<p>celsius is: ' + celsius.toString() + ' °C</p>'
+function calculate(input) {
+  if (input == 'fahrenheit') { // If the input is fahrenheit, do fahrenheit to celsius.
+    const fahrenheit = parseFloat(document.getElementById("fahrenheit").value)
+    const answer = ((fahrenheit - 32) * (5/9)).toFixed(2)
+    document.getElementById("output-celsius").innerHTML = "<p>This temperature is " + answer + "°C + in fahrenheit</p>"
 }
